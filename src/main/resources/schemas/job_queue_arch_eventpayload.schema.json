@@ -1,0 +1,11 @@
+{
+  "type": "json",
+  "jsonRequiredPaths": [
+    "[0].type",
+    "[0].id",
+    "[0].data.orderId"
+  ],
+  "jsonIgnorePaths": [
+    "[0].traceparent"
+  ]
+}

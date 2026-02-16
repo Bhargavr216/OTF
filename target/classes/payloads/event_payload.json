@@ -1,0 +1,36 @@
+[
+    [
+    {
+      "id": "dcc-test-01",
+      "source": "EOS",
+      "type": "eos.orders.allocated",
+      "data": {
+        "orderId": "dcc-1-1001",
+        "status": "Allocated"
+      },
+      "time": "2025-10-30T10:28:21.7223026+00:00",
+      "specversion": "1.0",
+      "dataschema": "#",
+      "datacontenttype": "application/json",
+      "xrequestid": "6f3483b16b13d94d8df7f7443f1d717a",
+      "traceparent": "00-6f3483b16b13d94d8df7f7443f1d717a-5f3771e6a0385f95-00"
+    }
+  ],
+  [
+    {
+      "id": "dcc-test-02",
+      "source": "EOS",
+      "type": "eos.orders.allocated",
+      "data": {
+        "orderId": "col-dcc1007",
+        "status": "Allocated"
+      },
+      "time": "2025-10-30T10:28:21.7223026+00:00",
+      "specversion": "1.0",
+      "dataschema": "#",
+      "datacontenttype": "application/json",
+      "xrequestid": "6f3483b16b13d94d8df7f7443f1d717a",
+      "traceparent": "00-6f3483b16b13d94d8df7f7443f1d717a-5f3771e6a0385f95-00"
+    }
+  ]
+]

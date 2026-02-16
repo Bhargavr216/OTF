@@ -1,0 +1,10 @@
+{
+  "type": "json",
+  "jsonRequiredPaths": [
+    "[0].type",
+    "[0].data.complianceRequired"
+  ],
+  "jsonOptionalPaths": [
+    "[0].data.sameDay"
+  ]
+}
