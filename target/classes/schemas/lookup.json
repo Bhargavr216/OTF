@@ -1,6 +1,0 @@
-{
-  "job_queue_arch": "id",
-  "job_queue": "id",
-  "item_details": "orderid",
-  "audit": ["id", "operation"]
-}

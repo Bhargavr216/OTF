@@ -1,6 +1,0 @@
-stepdefinitions\Testautomation$PayloadRecord.class
-stepdefinitions\Testautomation$TableColumnPolicy.class
-stepdefinitions\Testautomation.class
-stepdefinitions\Testautomation$ExpectedTable.class
-stepdefinitions\Testautomation$LookupConfig.class
-test\RunCucumberTest.class
