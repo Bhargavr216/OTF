@@ -1,0 +1,489 @@
+/* ROOT STYLING */
+:root {
+  --primary: #d71920;
+  --bg: #f4f6f9;
+  --card-bg: #ffffff;
+  --text: #222;
+  --subtext: #555;
+  --border: #e5e5e5;
+}
+
+/* BODY */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: var(--primary);
+  color: white;
+  padding: 18px 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.page-title {
+  text-align: center;
+  margin: 25px 0;
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--primary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.recipe-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.recipe-section button,
+#recipe-options button {
+  padding: 10px 15px;
+  margin: 8px;
+  border: none;
+  border-radius: 6px;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.recipe-section button:hover,
+#recipe-options button:hover {
+  background: #b31217;
+}
+
+#recipe-output {
+  margin-top: 20px;
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+
+/* FORM */
+.upload-wrapper {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  padding: 0 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.file-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  border: 1px dashed var(--primary);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.file-label:hover {
+  background: #ffe5e5;
+}
+
+.file-label input {
+  display: none;
+}
+
+input[type="number"] {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input[type="submit"] {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  background: #b31217;
+}
+
+/* IMAGE PREVIEW */
+.image-preview {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-preview img {
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+
+/* RESULT TABLE */
+/* Table Container */
+#result {
+  max-width: 1000px; /* wider table */
+  margin: 20px auto;
+  padding: 10px;
+  background: var(--bg);
+  border-radius: 12px;
+  overflow-x: auto; /* horizontal scroll on small screens */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px; /* ensures enough space for all columns */
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Table Header */
+th {
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 10px;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Table Cells */
+td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+/* Alternate Row Colors */
+tr:nth-child(even) {
+  background-color: #fff3f3;
+}
+
+tr:hover {
+  background-color: #ffe1e1;
+}
+
+/* Quantity Input Styling */
+.qty-input {
+  width: 80px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  text-align: right;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.qty-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 3px rgba(215, 25, 32, 0.3);
+}
+
+/* Price Column */
+.price-cell {
+  font-weight: 600;
+  text-align: right;
+  min-width: 90px;
+}
+
+/* Remove Button */
+.remove-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Total Row Styling */
+.total-row td {
+  font-weight: 700;
+  background: #ffdede;
+  text-align: right;
+  font-size: 16px;
+  padding: 14px 10px;
+  border-top: 2px solid #d71920;
+  border-bottom: 2px solid #d71920;
+}
+
+.total-row td:first-child {
+  text-align: left;
+  font-size: 18px;
+}
+
+
+/* Remove Button Styling */
+.remove-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+.remove-btn:active {
+  transform: scale(0.95);
+}
+
+.remove-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.4);
+}
+
+/* Modern Dish Name Input */
+input[type="text"] {
+  width: 93%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  font-size: 15px;
+  background: var(--card-bg);
+  transition: all 0.3s ease;
+  outline: none;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.04);
+}
+
+/* Focus State */
+input[type="text"]:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px rgba(215, 25, 32, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Placeholder styling */
+input[type="text"]::placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+/* OPTION BUTTONS CONTAINER */
+.search-options {
+  display: flex;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  padding: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* OPTION BUTTON */
+.option-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  color: var(--subtext);
+}
+
+/* ACTIVE STATE */
+.option-btn.active {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 3px 10px rgba(215, 25, 32, 0.3);
+}
+
+.hidden {
+  display: none;
+}
+.qty-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.qty-wrapper .qty-input {
+  width: 60px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.qty-wrapper .qty-btn {
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.qty-wrapper .qty-btn:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.qty-wrapper .qty-btn:active {
+  transform: scale(0.95);
+}
+
+/* Quantity Stepper */
+.qty-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.qty-wrapper .qty-input {
+  width: 60px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s;
+  background: #fff;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.qty-wrapper .qty-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(215, 25, 32, 0.2);
+}
+
+.qty-wrapper .qty-btn {
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.qty-wrapper .qty-btn:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.qty-wrapper .qty-btn:active {
+  transform: scale(0.95);
+}
+
+/* Price Field */
+.price-cell {
+  font-weight: 600;
+  text-align: right;
+  min-width: 90px;
+  color: #2c3e50;
+  background: #fff7f7;
+  border-radius: 6px;
+  padding: 8px 12px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  transition: background 0.3s;
+}
+
+.price-cell:hover {
+  background: #ffe5e5;
+}
+
+/* TOTAL ROW SUPERSTORE STYLE */
+.total-row td {
+  font-weight: 700;
+  background: #ffe5e5;      /* light pink/red for emphasis */
+  text-align: right;
+  font-size: 16px;
+  padding: 14px 12px;
+  border-top: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.2s;
+}
+
+.total-row td:first-child {
+  text-align: left;
+  font-size: 18px;
+  color: #d71920;
+}
+
+/* Optional: hover effect for total row */
+.total-row:hover td {
+  background: #ffdede;
+  transform: scale(1.01);
+}
+
+/* Total price strong highlight */
+#total-price strong {
+  font-size: 18px;
+  color: #d71920;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .file-label {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  table th, table td {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+/* Responsive Table Scroll */
+@media (max-width: 768px) {
+  #result {
+    padding: 5px;
+  }
+  table {
+    min-width: 600px;
+  }
+  th, td {
+    padding: 10px 6px;
+    font-size: 13px;
+  }
+  .qty-input {
+    width: 60px;
+    font-size: 13px;
+  }
+}
